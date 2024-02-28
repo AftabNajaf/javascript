@@ -1,0 +1,9 @@
+.container{
+    max-width: 500px;
+    margin: auto;
+    background: rgb(112, 93, 93);
+    padding: 10px;
+}
+button{
+margin-left: 150px;
+}
