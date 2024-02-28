@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html3</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addlang(langName){
+        const li=document.createElement('li')
+li.innerHTML=`${langName}`
+document.querySelector('.language').appendChild(li)
+    }
+    // addlang('c++')
+    // addlang('java')
+
+    function addOptLang(langName){
+        const li=document.createElement('li');
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptLang('python')
+    addOptLang('php')
+
+    //edit
+    const secondLang=document.querySelector('li:nth-child(2)')
+// secondLang.innerHTML='laravel'
+const newLi=document.createElement('li');
+newLi.textContent='aftab java'
+secondLang.replaceWith(newLi)
+
+const changeEle=document.querySelector('li:first-child')
+changeEle.outerHTML='<li>afi</li>'
+
+//remove
+const removeEle=document.querySelector('li:nth-child(3)')
+removeEle.remove()
+</script>
+</html>
