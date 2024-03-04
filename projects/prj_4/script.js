@@ -1,11 +1,11 @@
-const random=parseInt(Math.random()*100+1);
+let random=parseInt(Math.random()*100+1);
 const submit=document.querySelector('#submit');
 const userInput=document.querySelector('#guessField');
 const guessSlot=document.querySelector('.guesses');
 const remaining=document.querySelector('.lastResult');
 const lowOrHi=document.querySelector('.lowOrHi');
 const startOver=document.querySelector('.resultParas');
-
+console.log(random);
 const p=document.createElement('p');
 
 let prevGuess = []
@@ -61,7 +61,7 @@ function displayGuess(guess){
     userInput.value=''
     guessSlot.innerHTML += `${guess},`
     numGuess++;
-    remaining.innerHTML = `${11-numGuess}`
+    remaining.innerHTML = `${11-numGuess +1}`
 }
 
 function displayMessage(message){
@@ -83,11 +83,11 @@ function newGame(){
     //
     const newGameButton = document.querySelector('#newGame');
     newGameButton.addEventListener('click',function(e){
-        random=parseInt(Math.random() * 100 + 1);
+         random=parseInt(Math.random()*100+1);
         prevGuess=[];
         numGuess=1;
         guessSlot.innerHTML = '';
-        remaining.innerHTML = `${11 - numGuess}`;
+        remaining.innerHTML = `${11 - numGuess +1}`;
         userInput.removeAttribute('disabled');
         startOver.removeChild(p);
         playGame =true;
