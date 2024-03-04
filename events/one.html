@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events ||Images</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;" >
+    <h2>Images for Events</h2>
+    <div>
+        <ul id="images">
+            <li>
+                <img width="200px" src="https://t3.ftcdn.net/jpg/03/13/42/46/240_F_313424630_Uja1TnjdFhdz0bdbFnhMRuBTSIw25TWQ.jpg"
+                id="books" alt="books">
+            </li>
+            <li>
+               <img src="https://media.istockphoto.com/id/952729630/photo/test-pushing-keyboard-with-finger-3d-illustration.jpg?s=612x612&w=0&k=20&c=y6zIqQjHBkqN1LPQ8xXJD8qFLwWwRVanFLhhhppczNE="
+                 id="test" width="200px" alt="test"> 
+            </li>
+         <li>
+            <img src="https://cdn.pixabay.com/photo/2014/06/03/19/38/test-361512_640.jpg" 
+            alt="test2" id="test2" width="200px">
+         </li>
+        <li>
+            <a style="color: aliceblue;" href="https://google.com" id="google">Google</a>
+        </li>
+        </ul>
+    </div>
+    <script>
+//         document.getElementById('images').addEventListener('click',function(e){
+//            console.log('click inside the ul');
+//         },true)
+//         document.getElementById('books').addEventListener('click',function(){
+// console.log('click inside the book');
+//         },true)
+// document.getElementById('google').addEventListener('click',function(e){
+// e.preventDefault();
+// console.log('google clicked');
+// })
+        //type,timestamp,defaultprevented
+        // target, toelement, srcelement,currenttarget
+        //altkey, ctrlkey shiftkey, keycode
+document.getElementById('images').addEventListener('click',function(e){
+
+if(e.target.tagName === 'IMG'){
+    console.log(e.target.parentNode);
+    let removeIt=e.target.parentNode;
+    removeIt.remove();
+}
+})
+    </script>
+</body>
+</html>
