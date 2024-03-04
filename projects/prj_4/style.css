@@ -1,0 +1,10 @@
+.container{
+  max-width: 500px;
+  background-color: azure;
+  margin: 50px 0px 0px 400px;
+  text-align: center;
+}
+.submit{
+    margin-top: 25px;
+    color: rgb(121, 238, 238);
+}
