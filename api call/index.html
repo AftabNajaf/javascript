@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+</head>
+<body>
+   <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi earum veritatis quis, vitae maiores iste possimus eos tenetur blanditiis suscipit facere
+     fugiat pariatur voluptatum. Dolorum quas ad eum. Fugit, totam?
+   </p>
+   <div id="card"></div>
+   <script>
+    const requestUrl="https://api.github.com/users/aftabnajaf"
+    const xhr= new XMLHttpRequest();
+    xhr.open("GET",requestUrl)
+   xhr.onreadystatechange=function(){
+   if(xhr.readyState ===4){
+const data= JSON.parse(this.responseText)
+console.log(data.avatar_url);
+document.querySelector('#card').innerHTML=`<img src='${data.avatar_url}' 
+height='100px' width='100px' >
+<p>${data.name}</p>
+`
+   }
+   }
+  xhr.send()
+   </script>
+</body>
+</html>
