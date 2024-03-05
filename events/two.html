@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>evnts || task</title>
+</head>
+<body>
+    <h1>Java Script Events</h1>
+    <button id="stop">Stop</button>
+    <script>
+        const timeTest=function(){
+            console.log('aftab test');
+        }
+        const textChange=function(){
+           const text= document.querySelector('h1');
+           text.innerHTML='afta with javascript'
+        }
+
+        const changeMe=setTimeout(textChange,2000)
+
+        document.querySelector('#stop').addEventListener('click',function(){
+            clearTimeout(changeMe)
+            console.log('stopped');
+        })
+    </script>
+</body>
+</html>
