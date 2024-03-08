@@ -19,6 +19,9 @@ const User={
 
 }
 
-const usr= User
-// console.log(usr.email);
-console.log(usr.password);
+// const usr= User
+// // console.log(usr.email);
+// console.log(usr.password);
+
+const usr=Object.create(User)
+console.log(usr.email);
